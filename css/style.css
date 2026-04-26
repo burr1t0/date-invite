@@ -696,14 +696,14 @@ body {
 
 .finale__timer-value {
     font-family: var(--font-display);
-    font-size: clamp(22px, 5vw, 32px);
+    font-size: clamp(26px, 5.5vw, 38px);
     font-weight: 300;
     color: var(--text-primary);
     line-height: 1.0;
 }
 
 .finale__timer-unit {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-light);
     letter-spacing: 1px;
     text-transform: uppercase;
