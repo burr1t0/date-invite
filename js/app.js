@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const saved = await FirebaseDB.get('date-choice');
     if (saved && saved.chosen) {
         choiceMade = true;
-        chosenStyle = saved.style;
+        chosenStyle = saved.hint;
     }
 
     // Запускаем счётчики
@@ -39,7 +39,7 @@ function goToScreen(screenId) {
     if (!next || !current || current === next) return;
 
     current.classList.remove('active');
-    
+
     setTimeout(() => {
         next.classList.add('active');
         currentScreen = screenId;
@@ -68,9 +68,9 @@ function setupEntryScreen() {
             // Промежуточные клики — мяуканье
             const response = mauResponses[Math.floor(Math.random() * mauResponses.length)];
             mau.textContent = response;
-            
-            gsap.fromTo(mau, 
-                { scale: 0.9 }, 
+
+            gsap.fromTo(mau,
+                { scale: 0.9 },
                 { scale: 1, duration: 0.4, ease: 'back.out(1.7)' }
             );
         } else {
@@ -608,9 +608,21 @@ const HINTS_DATA = {
 };
 
 function initHints() {
-    if (choiceMade) {
-        // Уже выбирала — показываем финал сразу
-        goToScreen('finale');
+    if (choiceMade && chosenStyle) {
+        // Уже выбирала — показываем её карточку, потом финал
+        const hint = HINTS_DATA[chosenStyle];
+        const content = document.getElementById('hintsContent');
+        const reveal = document.getElementById('hintsReveal');
+        const chosenText = document.getElementById('hintsChosenText');
+        const label = document.getElementById('hintsRevealLabel');
+
+        chosenText.textContent = hint.text;
+        content.style.display = 'none';
+        reveal.style.display = 'flex';
+
+        gsap.to(label, { opacity: 1, y: 0, duration: 0.6, delay: 0.3, ease: 'power2.out' });
+        gsap.to('.hints__chosen-card', { opacity: 1, scale: 1, duration: 0.7, delay: 0.7, ease: 'back.out(1.3)' });
+        gsap.fromTo('#btnHintsNext', { opacity: 0 }, { opacity: 1, duration: 0.5, delay: 1.4 });
         return;
     }
 
@@ -739,11 +751,7 @@ function setupFinaleButtons() {
 function setupNavigation() {
     document.getElementById('btnToWords2').addEventListener('click', () => goToScreen('words'));
     document.getElementById('btnToConstructor').addEventListener('click', () => {
-        if (choiceMade) {
-            goToScreen('finale');
-        } else {
-            goToScreen('constructor');
-        }
+        goToScreen('constructor');
     });
 }
 
