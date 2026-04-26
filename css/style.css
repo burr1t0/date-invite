@@ -104,7 +104,7 @@ body {
 .btn--next {
     background: transparent;
     color: var(--text-light);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     padding: 12px 32px;
     border-bottom: 1px solid var(--pink-soft);
@@ -200,7 +200,7 @@ body {
 }
 
 .entry__hint {
-    font-size: 13px;
+    font-size: 16px;
     color: var(--text-light);
     margin-top: 16px;
     opacity: 0;
@@ -279,7 +279,7 @@ body {
 }
 
 .counter__label {
-    font-size: 12px;
+    font-size: 15px;
     color: var(--text-light);
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -296,7 +296,7 @@ body {
 
 .months__fact {
     font-family: var(--font-body);
-    font-size: clamp(13px, 2.5vw, 15px);
+    font-size: clamp(17px, 3.0vw, 19px);
     color: var(--text-light);
     letter-spacing: 0.3px;
     padding: 10px 20px;
@@ -394,7 +394,7 @@ body {
 
 .letter__line {
     font-family: 'Bad Script', cursive;
-    font-size: clamp(16px, 3.5vw, 19px);
+    font-size: clamp(19px, 4.0vw, 22px);
     line-height: 2.1;
     color: var(--text-secondary);
     margin-bottom: 16px;
@@ -442,13 +442,13 @@ body {
 
 .hints__header {
     text-align: center;
-    margin-bottom: clamp(16px, 3vh, 32px);
+    margin-bottom: clamp(19px, 3vh, 35px);
     flex-shrink: 0;
 }
 
 .hints__title {
     font-family: var(--font-display);
-    font-size: clamp(18px, 4.5vw, 28px);
+    font-size: clamp(20px, 5.0vw, 30px);
     font-weight: 400;
     color: var(--text-primary);
     margin: 0 0 2px;
@@ -457,7 +457,7 @@ body {
 
 .hints__title-line2 {
     font-family: var(--font-display);
-    font-size: clamp(17px, 4vw, 26px);
+    font-size: clamp(19px, 4.5vw, 28px);
     font-weight: 300;
     font-style: italic;
     color: var(--text-secondary);
@@ -465,7 +465,7 @@ body {
 }
 
 .hints__subtitle {
-    font-size: clamp(11px, 2.5vw, 13px);
+    font-size: clamp(15px, 3.0vw, 17px);
     color: var(--text-light);
     margin: 0;
     line-height: 1.5;
@@ -476,7 +476,7 @@ body {
 .hints__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: clamp(10px, 2.5vw, 16px);
+    gap: clamp(14px, 3.0vw, 20px);
     width: 100%;
     max-width: min(480px, calc(100vw - 40px));
 }
@@ -512,7 +512,7 @@ body {
 
 .hints__card-text {
     font-family: var(--font-display);
-    font-size: clamp(12px, 2.8vw, 15px);
+    font-size: clamp(16px, 3.3vw, 19px);
     font-style: italic;
     font-weight: 300;
     color: var(--text-secondary);
@@ -564,7 +564,7 @@ body {
 
 .hints__reveal-label {
     font-family: var(--font-display);
-    font-size: clamp(17px, 4vw, 24px);
+    font-size: clamp(19px, 4.5vw, 26px);
     font-style: italic;
     color: var(--text-secondary);
     margin: 0 0 28px;
@@ -587,7 +587,7 @@ body {
 
 .hints__chosen-text {
     font-family: var(--font-display);
-    font-size: clamp(15px, 3.8vw, 19px);
+    font-size: clamp(18px, 4.3vw, 22px);
     font-style: italic;
     font-weight: 300;
     color: var(--text-primary);
@@ -631,7 +631,7 @@ body {
 
 .finale__line--small {
     font-family: var(--font-body);
-    font-size: clamp(12px, 2.8vw, 14px);
+    font-size: clamp(16px, 3.3vw, 18px);
     font-weight: 300;
     color: var(--text-light);
     letter-spacing: 2px;
@@ -657,7 +657,7 @@ body {
     margin-bottom: 0;
     margin-top: 0;
     color: var(--text-light);
-    font-size: clamp(11px, 2.5vw, 13px);
+    font-size: clamp(15px, 3.0vw, 17px);
     letter-spacing: 0.5px;
     text-transform: none;
     font-style: italic;
@@ -703,7 +703,7 @@ body {
 }
 
 .finale__timer-unit {
-    font-size: 9px;
+    font-size: 16px;
     color: var(--text-light);
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -713,7 +713,7 @@ body {
 /* Мяу — последний штрих */
 .finale__mau {
     font-family: var(--font-display);
-    font-size: clamp(18px, 4vw, 22px);
+    font-size: clamp(20px, 4.5vw, 24px);
     font-style: italic;
     color: var(--pink-medium);
     opacity: 0;
