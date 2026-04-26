@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для тебя</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Nunito:wght@300;400;600;700&family=Bad+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Плавающие частицы фона -->
+    <div class="particles" id="particles"></div>
+
+    <!-- ===== ЭКРАН 1: ВХОД ===== -->
+    <section class="screen screen--entry active" id="screen-entry">
+        <div class="entry__content">
+            <div class="entry__mau-wrapper">
+                <div class="entry__mau" id="entryMau">мяу?</div>
+                <div class="entry__hint">нажми на меня</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ЭКРАН 2: 9 МЕСЯЦЕВ ===== -->
+    <section class="screen screen--months" id="screen-months">
+        <div class="months__content">
+            <div class="months__number" id="monthsNumber">9</div>
+            <div class="months__label">месяцев с тобой</div>
+            <div class="months__counter">
+                <div class="counter__item">
+                    <span class="counter__value" id="counterDays">0</span>
+                    <span class="counter__label">дней</span>
+                </div>
+                <div class="counter__item">
+                    <span class="counter__value" id="counterHours">0</span>
+                    <span class="counter__label">часов</span>
+                </div>
+                <div class="counter__item">
+                    <span class="counter__value" id="counterMinutes">0</span>
+                    <span class="counter__label">минут</span>
+                </div>
+                <div class="counter__item">
+                    <span class="counter__value" id="counterSeconds">0</span>
+                    <span class="counter__label">секунд</span>
+                </div>
+            </div>
+            <div class="months__facts">
+                <div class="months__fact">🌙 За это время луна 9 раз обошла Землю вокруг</div>
+                <div class="months__fact">🐱 Среднестатистический кот замяукал бы ~130 000 раз за это время</div>
+                <div class="months__fact">🌧️ В Питере за это время успело прийти и уйти ~150 дождливых дней</div>
+            </div>
+            <button class="btn btn--next" id="btnToWords2">дальше</button>
+        </div>
+    </section>
+
+    <!-- ===== ЭКРАН 3: ТАЙМЛАЙН ===== -->
+    <!-- ===== ЭКРАН 4: ЧТО ТЫ ДЛЯ МЕНЯ ===== -->
+    <section class="screen screen--words" id="screen-words">
+        <div class="words__content">
+            <div class="words__container" id="wordsContainer">
+                <!-- Слова появляются через JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ЭКРАН 5: ПИСЬМО ===== -->
+    <section class="screen screen--letter" id="screen-letter">
+        <div class="letter__content">
+            <div class="letter__paper">
+                <div class="letter__heading">Моя котечка,</div>
+                <div class="letter__body" id="letterBody">
+                    <p class="letter__line">За эти 9 месяцев ты стала моим самым родным котиком. Пишу это письмо и улыбаюсь — потому что вспоминаю всё сразу: как мы ночевали там, где была возможность, как гуляли по ночному Питеру ранней осенью, как лепили пластилиновые мордочки и смеялись, и сколько вкусного ты успела приготовить за это время — это вообще отдельная история.</p>
+                    <p class="letter__line">Я восхищаюсь тобой. Ты прекрасна, чудесна, сногсшибательна — и при этом такая умная, рассудительная, отзывчивая. Ну и совсем капельку шкодная, да.</p>
+                    <p class="letter__line">С твоим появлением моя жизнь наполнилась солнечными лучиками. Ты помогаешь мне видеть прекрасное и быть в моменте — и я очень хочу, чтобы ты чувствовала то же самое рядом со мной.</p>
+                    <p class="letter__line">И каждый раз, когда мы засыпаем вместе — пусть даже через экран — я чувствую, что ты рядом. Мне это очень дорого.</p>
+                    <p class="letter__line">Это всё сделано специально для тебя. Я старался — и буду стараться дальше, чтобы ты была самым счастливым котиком на свете </p>
+                </div>
+                <div class="letter__signature">Твой коть</div>
+            </div>
+            <button class="btn btn--next" id="btnToConstructor">узнать, что именно</button>
+        </div>
+    </section>
+
+    <!-- ===== ЭКРАН 6: ПАСХАЛКИ ===== -->
+    <section class="screen screen--hints" id="screen-constructor">
+        <div class="hints__content" id="hintsContent">
+            <div class="hints__header" id="hintsHeader">
+                <h2 class="hints__title">Я приглашаю тебя на свидание.</h2>
+                <p class="hints__title-line2">Но сначала...</p>
+                <p class="hints__subtitle">Ты можешь выбрать 1 подсказку, но вряд ли она сильно поможет, мяу</p>
+            </div>
+
+            <div class="hints__cards" id="hintsCards">
+                <div class="hints__card" data-hint="1">
+                    <div class="hints__card-number">I</div>
+                    <div class="hints__card-text">Иногда лучше просто закрыть глаза и чувствовать</div>
+                </div>
+                <div class="hints__card" data-hint="2">
+                    <div class="hints__card-number">II</div>
+                    <div class="hints__card-text">Иногда лучший маршрут — тот, что без карты</div>
+                </div>
+                <div class="hints__card" data-hint="3">
+                    <div class="hints__card-number">III</div>
+                    <div class="hints__card-text">Некоторые вещи лучше получать неожиданно</div>
+                </div>
+                <div class="hints__card" data-hint="4">
+                    <div class="hints__card-number">IV</div>
+                    <div class="hints__card-text">...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Состояние после выбора -->
+        <div class="hints__reveal" id="hintsReveal" style="display:none;">
+            <p class="hints__reveal-label" id="hintsRevealLabel">а вот и подсказка, хаха</p>
+            <div class="hints__chosen-card" id="hintsChosenCard">
+                <div class="hints__chosen-text" id="hintsChosenText"></div>
+            </div>
+            <button class="btn btn--next" id="btnHintsNext">дальше</button>
+        </div>
+    </section>
+
+    <!-- ===== ЭКРАН 7: ФИНАЛ ===== -->
+    <section class="screen screen--finale" id="screen-finale">
+        <div class="finale__content">
+
+            <!-- Строчки появляются одна за другой -->
+            <div class="finale__lines" id="finaleLines">
+                <p class="finale__line finale__line--small">2 мая, 17:00</p>
+                <p class="finale__line finale__line--big">Впереди</p>
+                <p class="finale__line finale__line--big finale__line--italic">прекрасный вечер</p>
+                <p class="finale__line finale__line--small">всё остальное ты узнаешь потом</p>
+            </div>
+
+            <!-- Таймер — деликатный, появляется после текста -->
+            <div class="finale__timer" id="finaleTimer">
+                <div class="finale__timer-values">
+                    <div class="finale__timer-item">
+                        <span class="finale__timer-value" id="dateDays">0</span>
+                        <span class="finale__timer-unit">дней</span>
+                    </div>
+                    <div class="finale__timer-item finale__timer-sep">:</div>
+                    <div class="finale__timer-item">
+                        <span class="finale__timer-value" id="dateHours">0</span>
+                        <span class="finale__timer-unit">часов</span>
+                    </div>
+                    <div class="finale__timer-item finale__timer-sep">:</div>
+                    <div class="finale__timer-item">
+                        <span class="finale__timer-value" id="dateMinutes">0</span>
+                        <span class="finale__timer-unit">минут</span>
+                    </div>
+                    <div class="finale__timer-item finale__timer-sep">:</div>
+                    <div class="finale__timer-item">
+                        <span class="finale__timer-value" id="dateSeconds">0</span>
+                        <span class="finale__timer-unit">секунд</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Мяу в самом конце -->
+            <div class="finale__mau" id="finaleMau">мяу ♡</div>
+
+        </div>
+        <canvas id="confettiCanvas"></canvas>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/confetti.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
